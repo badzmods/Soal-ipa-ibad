@@ -1,343 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Wulan!</title>
+    <title>Selamat Ulang Tahun Wulan!</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            overflow: hidden;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-        }
-
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
-            z-index: -1;
-            animation: moveBackground 100s linear infinite;
-        }
-
-        @keyframes moveBackground {
-            from { background-position: 0 0; }
-            to { background-position: 1000px 1000px; }
-        }
-
-        .container {
-            text-align: center;
-            max-width: 800px;
-            padding: 20px;
-        }
-
-        .message-box {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            margin-bottom: 30px;
-            transform-style: preserve-3d;
-        }
-
-        .message-text {
-            font-family: 'Pacifico', cursive;
-            color: #ff6b6b;
-            font-size: 2.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        /* Vinyl Player Styles */
-        .music-player {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .vinyl {
-            width: 200px;
-            height: 200px;
-            background: linear-gradient(45deg, #333 25%, transparent 25%, transparent 75%, #333 75%),
-                        linear-gradient(45deg, #333 25%, transparent 25%, transparent 75%, #333 75%);
-            background-size: 20px 20px;
-            background-position: 0 0, 10px 10px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            position: relative;
-            animation: spin 2s linear infinite;
-        }
-
-        .vinyl-inner {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background: white;
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: 2px solid #ff6b6b;
-        }
-
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .player-controls {
-            width: 100%;
-            max-width: 400px;
-        }
-
-        .control-btn {
-            background: #ff6b6b;
-            color: white;
-            border: none;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            font-size: 24px;
-            cursor: pointer;
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .control-btn:hover {
-            transform: scale(1.1);
-        }
-
-        .progress-container {
-            width: 100%;
-            height: 8px;
-            background: #e0e0e0;
-            border-radius: 4px;
-            margin-bottom: 5px;
-            cursor: pointer;
-        }
-
-        .progress-bar {
-            height: 100%;
-            background: linear-gradient(to right, #ff6b6b, #ff8e8e);
-            border-radius: 4px;
-            width: 0%;
-            transition: width 0.1s linear;
-        }
-
-        .time-info {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.8rem;
-            color: #666;
-        }
-
-        .wait-text {
-            margin-top: 20px;
-            font-style: italic;
-            color: #666;
-        }
-
-        /* Confetti Styles */
-        .confetti {
-            position: absolute;
-            width: 15px;
-            height: 15px;
-            background-color: #ff6b6b;
-            opacity: 0;
-        }
-
-        .confetti:nth-child(1) {
-            animation: confetti 5s ease-in-out infinite;
-            top: 10%;
-            left: 20%;
-        }
-        .confetti:nth-child(2) {
-            animation: confetti 4s ease-in-out infinite 0.5s;
-            top: 15%;
-            left: 50%;
-        }
-        /* Add more confetti items as needed */
-
-        @keyframes confetti {
-            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="background"></div>
     <div class="container">
-        <!-- Welcome Message -->
-        <div id="welcome" class="message-box animate__animated animate__fadeIn">
-            <h1 class="message-text">Welcome to Wulan's Birthday!</h1>
+        <!-- Tahap 1: Sambutan -->
+        <div id="welcome" class="message-box animate__animated">
+            <h1 class="message-text">Selamat Datang Wulan Mafula Fatimah</h1>
         </div>
         
-        <!-- Birthday Message (Hidden Initially) -->
+        <!-- Tahap 2: Ucapan ulang tahun -->
         <div id="birthday-text" class="message-box animate__animated hidden">
-            <h1 class="message-text">Happy Birthday Wulan! 🎉</h1>
+            <h1 class="message-text">Dengar-dengar, sekarang kamu ulang tahun! 🎉</h1>
         </div>
         
-        <!-- Song Announcement (Hidden Initially) -->
+        <!-- Tahap 3: Pengumuman lagu -->
         <div id="song-text" class="message-box animate__animated hidden">
-            <h1 class="message-text">Here's a song for you! 🎵</h1>
+            <h1 class="message-text">Ini lagu untuk kamu 🫵</h1>
         </div>
         
-        <!-- Music Player (Hidden Initially) -->
+        <!-- Tahap 4: Pemutar musik -->
         <div id="player-container" class="hidden">
             <div class="music-player animate__animated">
                 <div class="vinyl">
-                    <div class="vinyl-inner"></div>
+                    <div class="vinyl-inner">
+                        <span class="vinyl-text">Selamat Ulang Tahun</span>
+                    </div>
                 </div>
                 <div class="player-controls">
                     <button id="play-btn" class="control-btn">▶</button>
-                    <div class="song-info">Happy Birthday | Tipe-X</div>
+                    <div class="song-info">Lagu Ulang Tahun</div>
                     <div class="progress-container">
                         <div id="progress" class="progress-bar"></div>
                     </div>
                     <div class="time-info">
-                        <span id="current-time">0:00</span>
-                        <span id="duration">1:12</span>
+                        <span id="current-time">0:00</span> / 
+                        <span id="duration">1:20</span>
                     </div>
                 </div>
-                <div class="wait-text">Please wait until the song finishes...</div>
+                <div class="wait-text">Tunggu lagu sampai selesai ya...</div>
             </div>
         </div>
         
-        <!-- Final Message (Hidden Initially) -->
+        <!-- Tahap 5: Pesan akhir -->
         <div id="final-message" class="message-box animate__animated hidden">
-            <h1 class="message-text">Happy Birthday Wulan! 🎂</h1>
-            <p class="wishes">Wishing you health, happiness, and success!</p>
+            <h1 class="message-text">Selamat Ulang Tahun Wulan! 🎉</h1>
+            <p class="wishes">Panjang umur, sehat selalu, sukses dalam segala hal, dan bahagia selalu!</p>
             <div class="confetti"></div>
             <div class="confetti"></div>
-            <!-- Add more confetti divs as needed -->
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
         </div>
     </div>
 
-    <!-- Audio Element -->
+    <!-- File audio (tanpa loop) -->
     <audio id="birthday-song">
         <source src="ultah.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
+        Browser Anda tidak mendukung pemutaran audio.
     </audio>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const welcome = document.getElementById('welcome');
-            const birthdayText = document.getElementById('birthday-text');
-            const songText = document.getElementById('song-text');
-            const playerContainer = document.getElementById('player-container');
-            const finalMessage = document.getElementById('final-message');
-            const playBtn = document.getElementById('play-btn');
-            const progress = document.getElementById('progress');
-            const currentTimeEl = document.getElementById('current-time');
-            const durationEl = document.getElementById('duration');
-            const audio = document.getElementById('birthday-song');
-
-            // Sequence: Welcome → Birthday → Song → Player → Final Message
-            setTimeout(() => {
-                welcome.classList.add('animate__fadeOut');
-                setTimeout(() => {
-                    welcome.classList.add('hidden');
-                    birthdayText.classList.remove('hidden');
-                    birthdayText.classList.add('animate__bounceIn');
-                    
-                    setTimeout(() => {
-                        birthdayText.classList.add('animate__fadeOut');
-                        setTimeout(() => {
-                            birthdayText.classList.add('hidden');
-                            songText.classList.remove('hidden');
-                            songText.classList.add('animate__flipInX');
-                            
-                            setTimeout(() => {
-                                songText.classList.add('animate__fadeOut');
-                                setTimeout(() => {
-                                    songText.classList.add('hidden');
-                                    playerContainer.classList.remove('hidden');
-                                    playerContainer.classList.add('animate__zoomIn');
-                                    
-                                    // Auto-play music
-                                    audio.play().catch(e => console.log("Auto-play blocked:", e));
-                                }, 1000);
-                            }, 5000);
-                        }, 1000);
-                    }, 5000);
-                }, 1000);
-            }, 3000);
-
-            // Music Player Functions
-            function togglePlay() {
-                if (audio.paused) {
-                    audio.play();
-                    playBtn.textContent = '❚❚';
-                    document.querySelector('.vinyl').style.animationPlayState = 'running';
-                } else {
-                    audio.pause();
-                    playBtn.textContent = '▶';
-                    document.querySelector('.vinyl').style.animationPlayState = 'paused';
-                }
-            }
-
-            function updateProgress() {
-                const { duration, currentTime } = audio;
-                const progressPercent = (currentTime / duration) * 100;
-                progress.style.width = `${progressPercent}%`;
-                
-                // Format time
-                const durationMinutes = Math.floor(duration / 60);
-                let durationSeconds = Math.floor(duration % 60);
-                if (durationSeconds < 10) durationSeconds = `0${durationSeconds}`;
-                
-                if (durationSeconds) durationEl.textContent = `${durationMinutes}:${durationSeconds}`;
-                
-                const currentMinutes = Math.floor(currentTime / 60);
-                let currentSeconds = Math.floor(currentTime % 60);
-                if (currentSeconds < 10) currentSeconds = `0${currentSeconds}`;
-                currentTimeEl.textContent = `${currentMinutes}:${currentSeconds}`;
-            }
-
-            function setProgress(e) {
-                const width = this.clientWidth;
-                const clickX = e.offsetX;
-                const duration = audio.duration;
-                audio.currentTime = (clickX / width) * duration;
-            }
-
-            // Event Listeners
-            audio.addEventListener('timeupdate', updateProgress);
-            document.querySelector('.progress-container').addEventListener('click', setProgress);
-            playBtn.addEventListener('click', togglePlay);
-            
-            // When song ends
-            audio.addEventListener('ended', () => {
-                playerContainer.classList.add('animate__fadeOut');
-                setTimeout(() => {
-                    playerContainer.classList.add('hidden');
-                    finalMessage.classList.remove('hidden');
-                    finalMessage.classList.add('animate__zoomIn');
-                }, 1000);
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
